@@ -1,0 +1,58 @@
+/*
+ * about.less
+ * -----------------------------------------------
+*/
+
+
+/* -------- Bg Img Box ---------- */
+.bg-img-box {
+	position: relative;
+
+	.caption {
+		padding-left: 30px;
+		padding-right: 30px;
+		padding-top: 20px;
+		position: absolute;
+		top: 0;
+
+		.title {
+			font-size: 30px;
+			line-height: 39px;
+		}
+
+		p {
+			max-width: 280px;
+		}
+	}
+}
+.img-hover-border {
+	position: relative;
+}
+.img-hover-border::after {
+	background: rgba(0, 0, 0, 0.3) none repeat scroll 0 0;
+	border: 1px solid #999;
+	content: "";
+	height: 97%;
+	left: 5px;
+	position: absolute;
+	top: 4px;
+	transition: all 300ms ease-in-out 0s;
+	width: 95%;
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 991px) {	
+	.img-hover-border::after {
+	  height: 96%;
+	  left: 15px;
+	  top: 15px;
+	}
+}
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 479px) {
+	.img-hover-border::after {
+	  height: 96%;
+	  left: 10px;
+	  top: 10px;
+	}
+}
